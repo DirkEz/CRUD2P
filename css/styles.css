@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200;500&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    /* background-color: #ffcc33; */
+}
+
+.main-header {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: #ffcc33;
+    display: flex;
+    position: absolute;
+}
+
+.rondje {
+    margin-top: 20px;
+    margin-left: 125px;
+    width: 150px;
+    height: 150px;
+    background-color: #33322c;
+    border-radius: 150px;
+}
+
+.main-header .rondje img {
+    width: 125px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.main-header .text-img p {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+/* Uit Header */
+
+.main-blok .foto {
+    padding-top: 90px;
+    width: 100%;
+    height: 700px;
+    background-image: url("../img/main-head.png");
+    background-repeat: no-repeat;
+}
+
+.main-onder {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+}
+
+.info {
+    width: 100%;
+    height: 900px;
+    background-color: rgb(236, 236, 236);
+}
+
+.gallery  img {
+    max-width: 100%;
+    vertical-align: top;
+}
+.gallery {
+    display: flex;
+    margin: 10px auto;
+    max-width: 600px;
+    position: relative;
+    padding-top: 66.6666666667%;
+}
+@media screen and (min-width: 600px) {
+    .gallery {
+        padding-top: 400px;
+   }
+}
+.gallery__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.gallery__thumb {
+    padding-top: 6px;
+    margin: 6px;
+    display: block;
+}
+.gallery__selector {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+.gallery__selector:checked + .gallery__img {
+    opacity: 1;
+}
+.gallery__selector:checked ~ .gallery__thumb > img {
+    box-shadow: 0 0 0 3px #0be2f6;
+}
+
+
+.info-extra {
+    width: 100%;
+    height: 900px;
+    background-color: white; 
+}
+
+.foot {
+    width: 100%;
+    height: 400px;
+    background-color: #ffcc33;
+}
