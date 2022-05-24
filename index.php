@@ -13,8 +13,9 @@
                 <img id="head-icon" src="img/icon.png" alt="">
             </div>
             <div class="text-img">
-                <p>FLIGHTMIGHT</p>
+                 <a href="name.php"><p>FLIGHTMIGHT</p></a>
             </div>
+        <a href="php/login.php"><div class="login"><p>Login</p></div></a>
     </header>
     <div class="main-blok">
         <div class="foto">
@@ -30,12 +31,12 @@
   <div class="gallery__item">
     <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
     <img class="gallery__img" src="img/inf-foto1.jpg" alt=""/>
-    <label for="img-1" class="gallery__thumb"><img src="img/inf-foto1.jpg" alt=""/></label>
+    <label for="img-1" class="gallery__thumb"><img src="img/inf-foto1-klein.jpg" alt=""/></label>
   </div>
   <div class="gallery__item">
     <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
     <img class="gallery__img" src="https://picsum.photos/id/1039/600/400.jpg" alt=""/>
-    <label for="img-2" class="gallery__thumb"><img src="https://picsum.photos/id/1039/150/100.jpg" alt=""/></label>
+    <label for="img-2" class="gallery__thumb"><img src="img/inf-foto2-klein.jpg" alt=""/></label>
   </div>
   <div class="gallery__item">
     <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
