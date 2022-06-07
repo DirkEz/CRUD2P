@@ -8,50 +8,38 @@
     <title></title>
 </head>
 <body>
-    <header class="main-header">
-            <div class="rondje">
-                <img id="head-icon" src="img/icon.png" alt="">
-            </div>
-            <div class="text-img">
-                 <a href="name.php"><p>FLIGHTMIGHT</p></a>
-            </div>
-        <a href="php/login.php"><div class="login"><p>Login</p></div></a>
+    <header class="main-head">
+      
     </header>
-    <div class="main-blok">
-        <div class="foto">
+    <div class="zoeken">
 
+    </div>
+    <div class="zoeken-info">
+
+    </div>
+    <div class="fotos">
+      <div class="foto-blok-l">
+        <img src="img/foto-l.png" alt="foto-water" width="510px">
+      </div>
+      <div class="fotoblok-m">
+        <div class="flex">
+          <div class="blok1">
+          <img src="img/foto-m1.png" alt="foto-mid1" width="503px">
+          <img src="img/foto-m2.png" alt="foto-mid2" width="503px">
+          </div>
+          <div class="blok2">
+          <img src="img/foto-m3.png" alt="foto-mid3" width="503px">
+          <img src="img/foto-m4.png" alt="foto-mid4" width="503px">
+          </div>
         </div>
+      
+      </div>
+      <div class="foto-blok-r">
+
+      </div>
     </div>
-    <div class="main-onder">
-        <p></p>
-        <p></p>
+    <div class="fotos-info">
+
     </div>
-    <div class="info">
-    <section class="gallery">
-  <div class="gallery__item">
-    <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
-    <img class="gallery__img" src="img/inf-foto1.jpg" alt=""/>
-    <label for="img-1" class="gallery__thumb"><img src="img/inf-foto1-klein.jpg" alt=""/></label>
-  </div>
-  <div class="gallery__item">
-    <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
-    <img class="gallery__img" src="https://picsum.photos/id/1039/600/400.jpg" alt=""/>
-    <label for="img-2" class="gallery__thumb"><img src="img/inf-foto2-klein.jpg" alt=""/></label>
-  </div>
-  <div class="gallery__item">
-    <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
-    <img class="gallery__img" src="https://picsum.photos/id/1057/600/400.jpg" alt=""/>
-    <label for="img-3" class="gallery__thumb"><img src="https://picsum.photos/id/1057/150/100.jpg" alt=""/></label>
-  </div>
-  <div class="gallery__item">
-    <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
-    <img class="gallery__img" src="https://picsum.photos/id/106/600/400.jpg" alt=""/>
-    <label for="img-4" class="gallery__thumb"><img src="https://picsum.photos/id/106/150/100.jpg" alt=""/></label>
-  </div>
-</section>
-    </div>
-    <div class="info-extra"></div>
-    <footer class="foot"></footer>
-    <script src="js/header.js"></script>
 </body>
 </html>

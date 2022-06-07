@@ -12,122 +12,51 @@ body {
     /* background-color: #ffcc33; */
 }
 
-.main-header {
-    position: fixed;
-    width: 100%;
-    height: 90px;
+
+.main-head {
+    width: 100vw;
+    height: 120px;
+    background-color: #ffffff;
+}
+
+.zoeken {
+    width: 100vw;
+    height: 160px;
     background-color: #ffcc33;
+}
+
+.zoeken-info {
+    width: 100vw;
+    height: 140px;
+    background-color: #e2fbff;
+}
+`
+.flex {
     display: flex;
-    /* position: absolute; */
 }
 
-.rondje {
-    margin-top: 20px;
-    margin-left: 125px;
-    width: 150px;
-    height: 150px;
-    background-color: #33322c;
-    border-radius: 150px;
+.fotos {
+    display: flex;
+    width: 100vw;
+    height: 530;
+    margin-top: 10px;
 }
 
-.main-header .rondje img {
-    width: 125px;
+
+
+.foto-blok-l img {
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.blok1 img {
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.blok2 img {
     margin-top: 10px;
     margin-left: 10px;
+    border-radius: 10px;
 }
 
-.main-header .text-img p {
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 35px;
-    font-weight: 500;
-}
-
-/* Uit Header */
-
-.main-blok .foto {
-    padding-top: 90px;
-    width: 100%;
-    height: 700px;
-    background-image: url("../img/main-head.png");
-    background-repeat: no-repeat;
-}
-
-.main-onder {
-    width: 100%;
-    height: 600px;
-    background-color: white;
-}
-
-.info {
-    width: 100%;
-    height: 900px;
-    background-color: rgb(236, 236, 236);
-}
-
-.gallery  img {
-    max-width: 100%;
-    vertical-align: top;
-}
-.gallery {
-    display: flex;
-    margin: 10px auto;
-    max-width: 600px;
-    position: relative;
-    padding-top: 66.6666666667%;
-}
-@media screen and (min-width: 600px) {
-    .gallery {
-        padding-top: 400px;
-   }
-}
-.gallery__img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-.gallery__thumb {
-    padding-top: 6px;
-    margin: 6px;
-    display: block;
-}
-.gallery__selector {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-}
-.gallery__selector:checked + .gallery__img {
-    opacity: 1;
-}
-.gallery__selector:checked ~ .gallery__thumb > img {
-    box-shadow: 0 0 0 3px #0be2f6;
-}
-
-
-.info-extra {
-    width: 100%;
-    height: 900px;
-    background-color: white; 
-}
-
-.foot {
-    width: 100%;
-    height: 400px;
-    background-color: #ffcc33;
-}
-
-.login {
-    padding-left: -2px;
-    padding-top: 5px;
-    margin-top: 20px;
-    margin-left:1000px;
-    background-color: #33322c;
-    height: 50px;
-    width: 150px;
-    border-radius: 25px;
-    color: white;
-    text-align: center;
-    font-size: 25px;
-}

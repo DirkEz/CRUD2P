@@ -39,7 +39,13 @@ body {
     color: rgb(0, 0, 0);
     padding: 7px 0;
     background: transparent;
-    transition: border-color 0.2s;
+    transition: 0.2s;
+}
+
+.form__field-btn:hover {
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #ffdf80, #ffcc33) !important;
+    border-bottom: 0px;
 }
 
 .form__group {

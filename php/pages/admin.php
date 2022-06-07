@@ -23,10 +23,12 @@
 </head>
 <body>
 <a href="../redirect.php"><button >doeii!!!</button></a> Testknop!
+    
+    <div class="hb-l">
     <div class="txt-blok"> 
         <p><?php echo $_SESSION["username"]; ?></p>
+    </div>B
     </div>
-    <div class="hb-l"></div>
     <section class="mid-block">
         <div class="head">
             
