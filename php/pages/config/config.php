@@ -15,7 +15,7 @@ $opt = [
 
 try {
     $connect = new PDO($dns, $user, $pass, $opt);
-    echo "connected";
+    // echo "connected";
 } 
 catch (PDOException $e)
 {

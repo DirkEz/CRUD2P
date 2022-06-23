@@ -1,0 +1,125 @@
+* {
+  z-index: 0;
+  box-sizing: border-box;
+  margin: 0;
+ 
+}
+header {
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
+  background: #34495e;
+  color: #fff;
+  padding: 0.5em;
+}
+body {
+  background: url('https://source.unsplash.com/G8rRItjrwkA') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  max-width: 1024px;
+  margin: 20px auto;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+p {
+  margin: 0;
+}
+.fa.fa-star {
+  color: #fec902;
+}
+label {
+  width: 15%;
+  margin: 10px 1% 0 0;
+  display: inline-block;
+  background: #f6f6f6;
+  float: left;
+}
+input[type="text"] {
+  width: 84%;
+  margin: 10px 0;
+  height: 40px;
+  border: none;
+  background: #f6f6f6;
+  padding: 1em;
+}
+textarea {
+  width: 84%;
+  border: none;
+  background: #f6f6f6;
+  margin: 10px 0;
+  height: 100px;
+  padding: 1em;
+}
+button {
+  cursor: pointer;
+  float: right;
+  width: 20%;
+  height: 40px;
+  border: none;
+  background: #fec902;
+  font-size: 16px;
+  color: white;
+  margin-right: 10px;
+}
+
+.hoekje {
+  margin-left: -500px;
+}
+.review {
+  z-index: 10;
+  background: #f6f6f6;
+  width: 100%;
+  display: inline-block;
+  margin: 10px 0;
+}
+.review-photo {
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  float: left;
+  margin-right: 3em;
+}
+.review-box {
+  margin-top: 25px;
+  float: left;
+  display: inline-block;
+  width: 87.5%;
+  padding: 1.5em;
+  background: #f6f6f6;
+  position: relative;
+}
+.review-box:after,
+.review-box:before {
+  right: 100%;
+  top: 10%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.review-box:after {
+  border-right-color: #f6f6f6;
+  border-width: 25px;
+}
+.review-comment {
+  color: #9a9999;
+}
+.review-date {
+  padding-top: 5px;
+  padding-bottom: 25px;
+  color: #c7c7c7;
+}
+.review-author {
+  color: #c7c7c7;
+}
+.review-author strong {
+ 
+  color: black;
+}
