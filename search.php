@@ -1,14 +1,14 @@
 <?php 
 
-require_once('php/pages\config\config.php');
+require_once('php\pages\config\config.php');
 
-$sql = "SELECT * FROM reizen WHERE Land = :land";
-        $stmt = $connect->prepare($sql);
-        $stmt->bindParam(':land', $_POST['best']);
-        $stmt->execute();
-        $result = $stmt->fetch();
+if (isset($_GET['zoek'])) {
+    $reis = '%'.$_GET['zoek'].'%';
+    $sql = ("SELECT * FROM reizen WHERE hotel LIKE '".$reis."'");
+    $stmt = $connect->prepare($sql);
+    
 
-        if ($result = "nederland") {
-            echo $_POST['best']; 
-        }
+  } else {
+    $sql = ("SELECT * FROM reizen");
+  }
 ?> 

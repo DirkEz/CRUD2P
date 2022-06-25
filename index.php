@@ -38,17 +38,18 @@
           <label  for="from">
             <i class="ion-location"></i>
           </label>
-          <select name="bestemmingen" id="bestemmingen">
-          <option value="start">Waar wil je naartoe?    </option>
+          <input type="text" class="form__field" name="zoek" />
+          <!-- <select name="bestemmingen" id="bestemmingen"> -->
+          <!-- <option value="start">Waar wil je naartoe?    </option>
           <option value="best1" name="land">Nederland</option>
           <option value="best2" name="land">Italie</option>
           <option value="best3" name="land">Curacao</option>
           <option value="best4" name="land">Finland</option>
           <option value="best5" name="land">Egypte</option>
           <option value="best6" name="land">Amerika</option>
-          <option value="best7" name="land">Nieuw-Zeeland</option>
+          <option value="best7" name="land">Nieuw-Zeeland</option> -->
 
-          </select>
+          <!-- </select> -->
           <input type="submit" value="search" />
         </form>
       </div>
