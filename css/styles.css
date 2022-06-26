@@ -9,7 +9,7 @@
 }
 
 body {
-    /* background-color: #ffcc33; */
+    background-color: #ffcc33;
 }
 
 
@@ -30,7 +30,7 @@ body {
     height: 140px;
     background-color: #e2fbff;
 }
-`
+
 .flex {
     display: flex;
 }

@@ -12,6 +12,10 @@
   color: #56585b;
 }
 
+.ion-plane{
+  font-family: "Poppins", sans-serif;
+}
+
 ::-moz-placeholder {
   color: #56585b;
 }
@@ -93,90 +97,39 @@ header nav li:last-child{
   margin-right: 0;  
 }
 
-a.btn {
+.cover  {
+    height: 100vh;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.05)), to(rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
+    padding: 20px 50px;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn {
   color: #fff;
   padding: 10px;
   border: 1px solid rgba(255,255,255,0.5);
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   transition: all 0.2s;
+  background-color: #0a0a0b00;
 }
 
-a.btn:hover {
+.btn:hover {
   background: #ffcc33;
   border: 1px solid #ffcc33;
   color: #fff;
 }
 
-.cover  {
-  height: 100vh;
-  width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.05)), to(rgba(0,0,0,0)));
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 100%);
-  padding: 20px 50px;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-}
 
-.flex-form input[type="submit"] {
-  background: #ffcc33;
-  border: 1px solid #ffcc33;
-  color: #fff;
-  padding: 0 30px;
-  cursor: pointer;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  transition: all 0.2s;
-}
 
-.flex-form input[type="submit"]:hover {
-  background: #ffcc33;
-  border: 1px solid #ffcc33;
-}
-
-.flex-form {
-  display: -webkit-box;
-  display: flex;
-  z-index: 10;
-  position: relative;
-  width: 500px;
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-select {
-  width: 500px;
-}
-
-.flex-form > * {
-  border: 0;
-  padding: 0 0 0 10px;
-  background: #fff;
-  line-height: 50px;
-  font-size: 1rem;
-  border-radius: 0;
-  outline: 0;
-  -webkit-appearance: none;
-}
-
-input[type="text"] {
-  flex-basis: 500px;
-}
-
-#madeby {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 25px 100px;
-  color: #fff;
-}
 
 @media all and (max-width:800px) {
   body {

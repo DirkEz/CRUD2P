@@ -13,7 +13,7 @@ header {
   padding: 0.5em;
 }
 body {
-  background: url('https://source.unsplash.com/G8rRItjrwkA') no-repeat center center fixed;
+  ackground: url('../img/achtergrond/photo-1502322386937-39e80cbbb461.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
