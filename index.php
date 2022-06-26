@@ -18,10 +18,13 @@
               <a href="#" title="Hotels">Hotels</a>
             </li>
             <li>
-              <a href="#" title="Flights">Flights</a>
+              <a href="reviews.php" title="Reviews">Reviews</a>
             </li>
             <li>
-              <a href="reviews.php" title="Tours">Reviews</a>
+              <a href="contact.php" title="Contact">Contact</a>
+            </li>
+            <li>
+              <a href="overons.php" title="Over-ons">Over ons</a>
             </li>
             <li>
               <a class="btn" href="php/login.php" title="Register / Log In"

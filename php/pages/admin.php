@@ -29,6 +29,7 @@
 </head>
 <body>
 <a href="../redirect.php"><button >doeii!!!</button></a> Testknop!
+<a href="admin/add.php"><button >Add</button></a> Testknop!
     
     <div class="hb-l">
     <div class="txt-blok"> 
@@ -48,7 +49,7 @@
             ?>
             
             <tr>
-                <!-- <td><img src="CRUD/uploaded_img/<?php echo $row['image']; ?>" height="100" alt=""></td> -->
+                <td><img src="CRUD/uploaded_img/<?php echo $row['foto']; ?>" height="100" alt=""></td>
                 <td><?php echo $row['reisID']; ?></td>
                 <td><?php echo $row['hotel']; ?></td>
                 <td>€<?php echo $row['prijs']; ?>/-</td>
