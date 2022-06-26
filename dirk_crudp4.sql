@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 23 jun 2022 om 13:02
--- Serverversie: 10.4.21-MariaDB
--- PHP-versie: 8.0.10
+-- Gegenereerd op: 26 jun 2022 om 21:14
+-- Serverversie: 10.4.22-MariaDB
+-- PHP-versie: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -121,19 +121,24 @@ INSERT INTO `recenties` (`recentieID`, `voornaam`, `achternaam`, `bericht`, `rat
 CREATE TABLE `reizen` (
   `reisID` int(6) NOT NULL,
   `beginDatum` date DEFAULT NULL,
-  `eindDataum` date DEFAULT NULL,
+  `eindDatum` date DEFAULT NULL,
   `hotel` varchar(255) DEFAULT NULL,
   `prijs` int(4) DEFAULT NULL,
   `sterren` int(1) DEFAULT NULL,
-  `Land` varchar(255) DEFAULT NULL
+  `Land` varchar(255) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `reizen`
 --
 
-INSERT INTO `reizen` (`reisID`, `beginDatum`, `eindDataum`, `hotel`, `prijs`, `sterren`, `Land`) VALUES
-(2, NULL, NULL, 'Van der Valk', 500, 4, 'Nederland');
+INSERT INTO `reizen` (`reisID`, `beginDatum`, `eindDatum`, `hotel`, `prijs`, `sterren`, `Land`, `foto`) VALUES
+(2, NULL, NULL, 'Van der Valk', 500, 4, 'Nederland', NULL),
+(3, '2022-06-15', '2022-06-30', 'Van der Valk', 2500, 5, 'eqqweeqqe', 'unknown.png'),
+(4, '2022-06-15', '2022-06-30', 'Van der Valk', 2500, 5, 'eqqweeqqe', 'unknown.png'),
+(5, '2022-06-24', '2022-06-30', 'Van der Valk', 2500, 5, 'Nederland', 'unknown.png'),
+(6, '2022-06-29', '2022-06-30', 'Van der Valk Lent', 2500, 5, 'Nederland', 'unknown.png');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -198,7 +203,7 @@ ALTER TABLE `recenties`
 -- AUTO_INCREMENT voor een tabel `reizen`
 --
 ALTER TABLE `reizen`
-  MODIFY `reisID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `reisID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Beperkingen voor geëxporteerde tabellen
