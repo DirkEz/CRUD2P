@@ -1,0 +1,87 @@
+/* User page */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  width: 95vw;
+  height: 50px;
+  background-color: #e7e7e7;
+  margin-left: 2.5vw;
+  border-radius: 20px;
+}
+
+.boeking {
+  width: 450px;
+  height: 120px;
+  background-color: #727272;
+  border-radius: 25px;
+  margin-left: 35px;
+  margin-top: 11px;
+}
+
+.boeking {
+  width: 30vw;
+  height: 15vh;
+  background-color: yellow;
+  border-radius: 25px;
+  margin-left: 35px;
+  margin-top: 11px;
+}
+
+.mainbox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1500px;
+  height: 660px;
+  margin-left: 10px;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.dash {
+  background: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 4vh;
+  font-family: "Lato", sans-serif;
+}
+
+.box1 {
+  display: flex;
+  width: 30vw;
+  height: 66.5vh;
+  background-color: #cacaca;
+  border-radius: 25px;
+  margin-left: 35px;
+  margin-top: 8px;
+}
+
+.box2 {
+  display: flex;
+  width: 64vw;
+  height: 84vh;
+  background-color: #cacaca;
+  border-radius: 25px;
+  margin-left: 11px;
+  margin-top: 9px;
+}
+
+.account {
+  font-family: "Lato", sans-serif;
+  background: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.6vh;
+  font-weight: 500;
+  font-size: 30;
+  /* padding-top: 12px;
+  padding-left: 20px; */
+}
+
+body{
+  background: url('../img/achtergrond/GettyImages755761377.jpg') no-repeat center center fixed;
+}

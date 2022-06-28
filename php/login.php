@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -8,6 +10,7 @@
 		<title>Login - FLIGHTMIGHT</title>
 	</head>
 <body>
+	
 		<div class="blok">
 			<div class="formpje">
 				<form action="login_redirect.php" method="POST">	
@@ -29,7 +32,6 @@
 			</div>
 		</div>
 	</div>
-
 	</div>
 </body>
 </html>

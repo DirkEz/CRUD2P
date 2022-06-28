@@ -1,45 +1,51 @@
+<?php session_start(); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title></title>
-</head>
-<body>
-    <header class="main-head">
-      
-    </header>
-    <div class="zoeken">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FLIGHTMIGHT - Home </title>
+    <!-- <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'> -->
+    <link rel="stylesheet" href="css/front.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2>
+          <a href="https://eatlospolloshermanos.com/"><i class="ion-plane"></i>FlightMight</a>
+        </h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="hotel.php" title="Locaties">Locaties</a>
+            </li>
+            <li>
+              <a href="reviews.php" title="Reviews">Reviews</a>
+            </li>
+            <li>
+              <a href="contact.php" title="Contact">Contact</a>
+            </li>
+            <li>
+              <a href="overons.php" title="Over-ons">Over ons</a>
+            </li>
+            <li>
+              <a class="btn" href="php/login.php" title="Register / Log In">Register/Log In</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-    </div>
-    <div class="zoeken-info">
-
-    </div>
-    <div class="fotos">
-      <div class="foto-blok-l">
-        <img src="img/foto-l.png" alt="foto-water" width="510px">
+      <div class="cover">
+        <h1>Discover what's out there.</h1>
+        <form method="post" action="search.php" class="flex-form">
+          <label  for="from">
+            <i class="ion-location"></i>
+          </label>
+          <input type="text" class="form__field" name="zoek" />
+          <input type="submit" value="search" />
+        </form>
       </div>
-      <div class="fotoblok-m">
-        <div class="flex">
-          <div class="blok1">
-          <img src="img/foto-m1.png" alt="foto-mid1" width="503px">
-          <img src="img/foto-m2.png" alt="foto-mid2" width="503px">
-          </div>
-          <div class="blok2">
-          <img src="img/foto-m3.png" alt="foto-mid3" width="503px">
-          <img src="img/foto-m4.png" alt="foto-mid4" width="503px">
-          </div>
-        </div>
-      
-      </div>
-      <div class="foto-blok-r">
-
-      </div>
     </div>
-    <div class="fotos-info">
-
-    </div>
-</body>
+  </body>
 </html>

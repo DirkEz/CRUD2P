@@ -1,12 +1,19 @@
 <?php 
     session_start();
     
+    
 
     if($_SESSION["username"]){
         echo "";
     } else {
         header ("Location: ../login.php");
     }
+
+    include_once('config\config.php');
+
+    
+
+    $stmt = $connect->query("SELECT * FROM reizen");
 ?>
 
 
@@ -18,27 +25,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\style.css">
     <title><?php 
-    echo $_SESSION["username"];
-?> - Admin Panel</title>
+            echo $_SESSION["username"];
+    ?> - Admin Panel</title>
 </head>
 <body>
-<a href="../redirect.php"><button >doeii!!!</button></a> Testknop!
+<a href="../redirect.php"><button >doeii!!!</button></a> -log uit
+<a href="admin/add.php"><button >Add</button></a> -voeg iets toe
+<a href="admin/contact_view.php"><button >vragen</button></a> -vragen
+<a href="admin/vakanties.php"><button >Hotels</button></a> -Hotels
+
     
-    <div class="hb-l">
-    <div class="txt-blok"> 
-        <p><?php echo $_SESSION["username"]; ?></p>
-    </div>B
+    <div class="blok">
+
+
+
     </div>
-    <section class="mid-block">
-        <div class="head">
-            
-        </div>
-        <div class="flex">
-            <div class="mid-l"></div>
-            <div class="mid-r"></div>
-        </div>
-        
-        <div class="foot"></div>
-    </section>
+
+
+   
 </body>
 </html>

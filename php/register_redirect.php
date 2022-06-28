@@ -1,6 +1,5 @@
 <?php 
     require_once('pages/config/config.php');
-    session_start();
     
     if (isset($_POST['register'])){
         if($_POST['voornaam'] != "" || $_POST['achternaam'] != "" || $_POST['username'] != "" || $_POST['password'] != ""){
