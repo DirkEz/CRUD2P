@@ -1,3 +1,6 @@
+<?php session_start(); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +18,7 @@
         <nav>
           <ul>
             <li>
-              <a href="#" title="Hotels">Hotels</a>
+              <a href="hotel.php" title="Locaties">Locaties</a>
             </li>
             <li>
               <a href="reviews.php" title="Reviews">Reviews</a>
@@ -27,9 +30,7 @@
               <a href="overons.php" title="Over-ons">Over ons</a>
             </li>
             <li>
-              <a class="btn" href="php/login.php" title="Register / Log In"
-                >Register/Log In</a
-              >
+              <a class="btn" href="php/login.php" title="Register / Log In">Register/Log In</a>
             </li>
           </ul>
         </nav>

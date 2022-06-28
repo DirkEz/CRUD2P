@@ -4,20 +4,14 @@ require_once('php/pages/config/config.php')
 
 ?>
 
+    <title>Zoeken: <?php echo $_POST['zoek']?> </title>
+    <link rel="stylesheet" href="css/zoeken.css" />
 
-<!DOCTYPE html>
-<html>
-  <body>
-    <!-- (A) SEARCH FORM
-    <form method="post" action="1-form.php">
-      <h1>SEARCH FOR USERS</h1>
-      <input type="text" name="search" required/>
-      <input type="submit" value="Search"/>
-    </form> -->
 
+    
     <?php
     // (B) PROCESS SEARCH WHEN FORM SUBMITTED
-    if (isset($_POST["zoek"])) {
+    
       // (B1) SEARCH FOR USERS
       // require "2-search.php";
       $sql = ("SELECT * FROM `reizen` WHERE `hotel` LIKE ? OR `Land` LIKE ?");
@@ -28,10 +22,54 @@ require_once('php/pages/config/config.php')
       // if (isset($_POST["zoek"])) { echo json_encode($results); }
 
       // (B2) DISPLAY RESULTS
-      if (count($results) > 0) { foreach ($results as $r) {
-        printf("<div>%s - %s</div>", $r["hotel"], $r["Land"]);
-      }} else { echo "No results found"; }
-    }
-    ?>
-  </body>
+      ?>
+
+
+     
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Zoek</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="cards">
+<?php if (isset($_POST["zoek"])) {?>
+<?php if (count($results) > 0) { foreach ($results as $r) { ?>
+  <div class="card">
+    <div class="card__image-holder">
+      <img src="php\pages\admin\uploaded_img/<?php echo $r["foto"] ?>" height="auto" alt="fotos">
+    </div>
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2>
+      <p><?php echo $r["hotel"]; ?></p>
+          <small> <?php echo $r["Land"]; ?></small>
+      </h2>
+    </div>
+    <div class="card-flap flap1">
+      <div class="card-flap flap2">
+        <div class="card-actions">
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php } 
+  
+    
+  } else { echo "No results found"; }
+} ?>
+
+</div>
+
+</body>
 </html>

@@ -37,21 +37,22 @@
       </header>
 
       <div class="cover">
-            <a>
-			<div class="blok">
-			<div class="formpje">
-            <form>
-                <input name="name" placeholder="What is your name?" class="name" required />
-                <input name="emailaddress" placeholder="What is your email?" class="email" type="email" required />
-                <textarea rows="4" cols="50" name="subject" placeholder="Please enter your message" class="message" required></textarea>
-                <input class="btn" name="submit" class="btn" type="submit" value="Send" />
-            </form></div>			
-		</div>
-
-
-
-
-
+          <div class="blok">
+                <div class="formpje">
+                  <form action="bericht-redirect.php" method="POST">
+                      <input name="naam" placeholder="What is your name?" class="name" required />
+                      <br>
+                      <br>
+                      <input name="email" placeholder="What is your email?" class="email" type="email" required />
+                      <br>
+                      <br>
+                      <textarea rows="4" cols="50" name="bericht" placeholder="Please enter your message" class="message" required ></textarea>
+                      <br>
+                      <br>
+                      <input class="btn" name="verstuur" class="btn" type="submit" value="Send" />
+                  </form>
+                </div>			
+          </div>
        </div>
       </div>
     </div>

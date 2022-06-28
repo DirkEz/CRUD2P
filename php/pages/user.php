@@ -16,6 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/userpage.css">
+    <link rel="stylesheet" href="css/klok.css">
     <title>
     <?php 
     echo $_SESSION["username"];
@@ -30,12 +31,14 @@
         ?>
     </div>  
     </header>
+    <a href="../redirect.php">Terug</a>
+    <a href=""></a>
     <div class="mainbox"> 
         <div class="boeking"> 
             <h1 class="dash">dashboard</h1>
         </div>
         <div class="box1"> 
-            
+
         </div>
         <div class="box2"> 
                 

@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 
 * {
-  background-color: white;
   padding: 0px;
   margin: 0px;
 }
@@ -81,4 +80,8 @@
   font-size: 30;
   /* padding-top: 12px;
   padding-left: 20px; */
+}
+
+body{
+  background: url('../img/achtergrond/GettyImages755761377.jpg') no-repeat center center fixed;
 }

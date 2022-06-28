@@ -23,8 +23,8 @@ if(isset($_POST['add_product'])){
    $reis_image_tmp_name = $_FILES['product_image']['tmp_name'];
    $reis_image_folder = 'uploaded_img/'.$reis_image;
 
-   if(empty($reis_name) || empty($reis_price) || empty($reis_image) || empty($reis_land) || empty($reis_bdate) || empty($reis_edate) || empty($reis_sterren)){
-      $message[] = 'please fill out all';
+   if(empty($reis_name) || empty($reis_price) || empty($reis_image) || empty($reis_land) || empty($reis_bdate) || empty($reis_edate) || empty($reis_sterren)){ 
+      $message[] = 'Vul alles in!';
    }else{
     $stmt = $connect->query("INSERT INTO reizen(beginDatum, eindDatum, hotel, prijs, sterren, Land, foto) VALUES('$reis_bdate', '$reis_edate', '$reis_name', '$reis_price', '$reis_sterren', '$reis_land', '$reis_image')");
       
@@ -34,17 +34,13 @@ if(isset($_POST['add_product'])){
          sleep(2);
          header('location:../admin.php');
       }else{
-         $message[] = 'could not add the product';
+         $message[] = 'Kon geen product toevoegen!';
       }
    }
 
 };
 
-if(isset($_GET['delete'])){
-   $id = $_GET['delete'];
-   $stmt = $connect->query("DELETE FROM products WHERE id = $id");
-   header('location:admin_page.php');
-};
+
 
 ?>
 

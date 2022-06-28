@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.hotels{
+    background-color: white;
+    width: 100%;
+  }
+
+.hotels p {
+  padding-top: -50px;
+  margin-left: 190px;
+}
+body{
+    background: url(../img/photo-1502322386937-39e80cbbb461.jpg)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}

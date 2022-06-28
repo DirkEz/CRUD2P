@@ -1,6 +1,7 @@
 <?php 
     session_start();
     
+    
 
     if($_SESSION["username"]){
         echo "";
@@ -10,7 +11,7 @@
 
     include_once('config\config.php');
 
-
+    
 
     $stmt = $connect->query("SELECT * FROM reizen");
 ?>
@@ -28,42 +29,19 @@
     ?> - Admin Panel</title>
 </head>
 <body>
-<a href="../redirect.php"><button >doeii!!!</button></a> Testknop!
-<a href="admin/add.php"><button >Add</button></a> Testknop!
+<a href="../redirect.php"><button >doeii!!!</button></a> -log uit
+<a href="admin/add.php"><button >Add</button></a> -voeg iets toe
+<a href="admin/contact_view.php"><button >vragen</button></a> -vragen
+<a href="admin/vakanties.php"><button >Hotels</button></a> -Hotels
+
     
-    <div class="hb-l">
-    <div class="txt-blok"> 
-        <p><?php echo $_SESSION["username"]; ?></p>
-    </div>B
+    <div class="blok">
+
+
+
     </div>
-    <section class="mid-block">
-        <div class="head">
-            
-        </div>
-        <div class="flex">
-            <div class="mid-l">
-            
-            </div>
-            <div class="mid-r">
-            <?php  while ($row = $stmt->fetch()) {
-            ?>
-            
-            <tr>
-                <td><img src="CRUD/uploaded_img/<?php echo $row['foto']; ?>" height="100" alt=""></td>
-                <td><?php echo $row['reisID']; ?></td>
-                <td><?php echo $row['hotel']; ?></td>
-                <td>€<?php echo $row['prijs']; ?>/-</td>
-                <td>
-                    <!-- <a href=" CRUD\update.php?edit=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-edit"></i> edit </a>
-                    <a href="admin.php?delete=<?php echo $row['id']; ?>" class="btn"> <i class="fas fa-trash"></i> delete </a> -->
-                </td>
-            </tr>
-            
-            <?php } ?>
-            </div>
-        </div>
-        
-        <div class="foot"></div>
-    </section>
+
+
+   
 </body>
 </html>
