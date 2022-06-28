@@ -41,7 +41,7 @@
                 Welkom bij Flightmight. In 2022 verkozen tot beste online reisbureau en in 2021 tot populairste online reisbureau van Nederland. Maar dat niet alleen, sinds 2021 strijden wij al voor de laagste prijzen.
                 <br>
                 <br>
-                Dé Flightmight (onderdeel van Elmar Travel Group) is in 2021 begonnen in Nijmegen en is groot geworden door zich volledig toe te leggen op goedkope vakanties. Een team van medewerkers belde in de begintijd elke dag de reisorganisaties of luchtvaartmaatschappijen waar we mee samenwerkten om de beste vakantie aanbiedingen op te halen.
+                Flightmight (onderdeel van Elmar Travel Group) is in 2021 begonnen in Nijmegen en is groot geworden door zich volledig toe te leggen op goedkope vakanties. Een team van medewerkers belde in de begintijd elke dag de reisorganisaties of luchtvaartmaatschappijen waar we mee samenwerkten om de beste vakantie aanbiedingen op te halen.
                 <br>
                 <br>
                 Waarom kunnen wij onze reizen zo voordelig aanbieden?
