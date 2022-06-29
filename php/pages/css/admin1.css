@@ -1,0 +1,150 @@
+/* User page */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  width: 95vw;
+  height: 50px;
+  background-color: #e7e7e7;
+  margin-left: 2.5vw;
+  border-radius: 20px;
+}
+
+.boeking {
+  width: 450px;
+  height: 120px;
+  background-color: #727272;
+  border-radius: 25px;
+  margin-left: 35px;
+  margin-top: 11px;
+}
+
+.boeking {
+  width: 30vw;
+  height: 15vh;
+  background-color: yellow;
+  border-radius: 25px;
+  margin-left: 35px;
+  margin-top: 11px;
+}
+
+.mainbox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1500px;
+  height: 660px;
+  margin-left: 10px;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.dash {
+  background: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 4vh;
+  font-family: "Lato", sans-serif;
+}
+
+.box1 {
+  display: flex;
+  width: 30vw;
+  height: 66.5vh;
+  background-color: #cacaca;
+  border-radius: 25px;
+  margin-left: 35px;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box2 {
+  display: flex;
+  width: 64vw;
+  height: 84vh;
+  background-color: #cacaca;
+  border-radius: 25px;
+  margin-left: 11px;
+  margin-top: 9px;
+}
+
+.account {
+  font-family: "Lato", sans-serif;
+  background: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.6vh;
+  font-weight: 500;
+  font-size: 30;
+  /* padding-top: 12px;
+  padding-left: 20px; */
+}
+
+body{
+  background: url('../img/achtergrond/GettyImages755761377.jpg') no-repeat center center fixed;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+  .btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: rgb(255,27,0);
+  background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
+  }
+  .btn-5:hover {
+    color: #f0094a;
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #f0094a;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
