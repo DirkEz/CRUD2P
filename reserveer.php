@@ -1,3 +1,12 @@
+<? session_start();
+echo $_SESSION["success"] = "The record was inserted successfully.";
+
+echo $_SESSION['gebruikersID'];
+
+   include_once('php\pages\config\config.php');
+
+?>
+
 </html>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,9 +46,10 @@
       </header>
 
       <div class="cover">
+    <?php  echo $_SESSION["gebruikerID"]; ?>
           <div class="blok">
                 <div class="formpje">
-                <form action="">
+                <form action="reserveer_redirect.php">
                 <label for="vol" class="info">in welk hotel wilt u verblijven?</label> 
                 <br>
                 <br>
