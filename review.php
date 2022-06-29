@@ -1,3 +1,11 @@
+<?php session_start(); 
+
+include_once('php/pages\config\config.php');
+
+$stmt = $connect->query("SELECT * FROM reizen");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -13,6 +21,12 @@
 			<div class="formpje">
 				<form action="review_redirect.php" method="POST">	
 				
+				<select name="hotel" id="hotel">
+				<?php  while ($row = $stmt->fetch()) { ?>
+					<option value="<?php echo $row['hotel'] ?>"><?php echo $row['hotel'] ?></option>
+					<?php  }?>
+				</select>
+
 				<div class="form__group">
 						<label>Voornaam</label>
 						<input type="text" class="form__field" name="voornaam" />

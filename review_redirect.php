@@ -4,11 +4,12 @@
     
     if (isset($_POST['verstuur'])){
         if($_POST['naam'] != "" || $_POST['bericht'] != "" || $_POST['rating'] != "" || $_POST['password'] != ""){
-        $sql = "INSERT INTO recenties (voornaam,achternaam,bericht,rating,datum)
-        VALUES (:voornaam,:achternaam,:bericht,:rating, :datum)";
+        $sql = "INSERT INTO recenties (hotel, voornaam,achternaam,bericht,rating,datum)
+        VALUES (:hotel, :voornaam,:achternaam,:bericht,:rating, :datum)";
         $stmt = $connect->prepare($sql);
         $datum = date('Y-m-d');
         // echo $datum;
+        $stmt->bindParam(":hotel", $_POST['hotel']);
         $stmt->bindParam(":voornaam", $_POST['voornaam']);
         $stmt->bindParam(":achternaam", $_POST['achternaam']);
         $stmt->bindParam(":bericht", $_POST['bericht']);

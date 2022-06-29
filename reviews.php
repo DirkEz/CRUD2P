@@ -39,7 +39,7 @@ $stmt = $connect->query("SELECT * FROM recenties");
       - <?php echo $row['bericht']?></p>
     </div>
     <div class="review-comment">
-      <p><?php echo $row['rating']?> sterren</p>
+      <p><?php echo $row['rating']?> sterren - Reis: <?php echo $row['hotel']?></p>
     </div>
         <div class="review-date">
       <time><?php echo $row['datum']?></time>
