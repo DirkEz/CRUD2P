@@ -46,7 +46,7 @@ require_once('php/pages/config/config.php')
       <img src="php\pages\admin\uploaded_img/<?php echo $r["foto"] ?>" height="auto" alt="fotos">
     </div>
     <div class="card-title">
-      <a href="#" class="toggle-info btn">
+      <a href="reserveer.php" class="toggle-info btn">
         <span class="left"></span>
         <span class="right"></span>
       </a>
