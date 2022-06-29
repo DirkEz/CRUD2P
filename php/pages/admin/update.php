@@ -67,13 +67,13 @@ if(isset($_POST['update_product'])){
    
    <form action="" method="post" enctype="multipart/form-data">
       <h3 class="title">update the product</h3>
-      <input type="text" placeholder="Voer hotel naam in" name="product_name" class="box">
-         <input type="text" placeholder="Voer het land in" name="product_land" class="box">
-         <input type="date" placeholder="Begin datum" name="product_bdate" class="box">
-         <input type="date" placeholder="Eind datum" name="product_edate" class="box">
-         <input type="number" placeholder="Prijs" name="product_price" class="box">
-         <input type="number" placeholder="Hoeveelheid sterren (Max 5)" name="product_sterren" class="box">
-         <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box">
+         <input type="text" placeholder="Voer hotel naam in" name="product_name" class="box" value="<?php echo $row['hotel']?>">
+         <input type="text" placeholder="Voer het land in" name="product_land" class="box" value="<?php echo $row['hotel']?>">
+         <input type="date" placeholder="Begin datum" name="product_bdate" class="box" value="<?php echo $row['beginDatum']?>">
+         <input type="date" placeholder="Eind datum" name="product_edate" class="box" value="<?php echo $row['eindDatum']?>">
+         <input type="number" placeholder="Prijs" name="product_price" class="box" min="1" value="<?php echo $row['prijs']?>">
+         <input type="number" placeholder="Hoeveelheid sterren" min="1" max="5" name="product_sterren" class="box" value="<?php echo $row['sterren']?>">
+         <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box" value="<?php echo $row['foto']?>">
          <input type="submit" class="btn" name="add_product" value="add product">
       <a href="../admin.php" class="btn">go back!</a>
    </form>
