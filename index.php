@@ -18,7 +18,7 @@
         <nav>
           <ul>
             <li>
-              <a href="hotel.php" title="Locaties">Locaties</a>
+              <a href="reserveer.php" title="Locaties">Locaties</a>
             </li>
             <li>
               <a href="reviews.php" title="Reviews">Reviews</a>
