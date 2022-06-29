@@ -33,6 +33,7 @@
 <a href="admin/add.php"><button >Add</button></a> -voeg iets toe
 <a href="admin/contact_view.php"><button >vragen</button></a> -vragen
 <a href="admin/vakanties.php"><button >Hotels</button></a> -Hotels
+<a href="admin/users.php"><button >Users</button></a> -User management
 
     
     <div class="blok">
