@@ -29,12 +29,32 @@
     ?> - Admin Panel</title>
 </head>
 <body>
-<a href="../redirect.php"><button >doeii!!!</button></a> -log uit
-<a href="admin/add.php"><button >Add</button></a> -voeg iets toe
-<a href="admin/contact_view.php"><button >vragen</button></a> -vragen
-<a href="admin/vakanties.php"><button >Hotels</button></a> -Hotels
-<a href="admin/users.php"><button >Users</button></a> -User management
+    <div class="container_admin">
+        <div class="log_uit">
+            <a href="../redirect.php"><button >doeii!!!</button></a>
+            <p>log uit</p>
+        </div>
+        
+        <div class="add">
+            <a href="admin/add.php"><button >Add</button></a>
+            <p>voeg iets toe</p>
+        </div>
 
+        <div class="vragen">
+            <a href="admin/contact_view.php"><button >vragen</button></a>
+            <p>vragen</p>
+        </div>
+
+        <div class="hotels">
+            <a href="admin/vakanties.php"><button >Hotels</button></a>
+            <p>Hotels</p>
+        </div>
+
+        <div class="management">
+            <a href="admin/users.php"><button >Users</button></a>
+            <p>User management</p>
+        </div>
+    </div>
     
     <div class="blok">
 
