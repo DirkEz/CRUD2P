@@ -32,34 +32,122 @@ body {
 } */
 
 .container_admin {
+    border-radius: 10px;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-top: 50px;
     width: 500px;
     height: 500px;
-    background-color: blue;
+    background-color: rgb(160, 160, 160);
 }
 
 .container_admin .log_uit {
     width: 100%;
     height: 20%;
-    background-color: aqua;
+    background-color: rgb(160, 160, 160);
 }
 
 .container_admin .add {
     width: 100%;
     height: 20%;
-    background-color: aqua;
+    background-color: rgb(160, 160, 160);
 }
 .container_admin .vragen {
     width: 100%;
     height: 20%;
-    background-color: aqua;
+    background-color: rgb(160, 160, 160);
 }
 .container_admin .hotels{
     width: 100%;
     height: 20%;
-    background-color: aqua;
+    background-color: rgb(160, 160, 160);
 }
 .container_admin .management {
     width: 100%;
     height: 20%;
-    background-color: aqua;
+    background-color: rgb(160, 160, 160);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn_blok {
+    width: 95%;
+    height: 90px;
+    margin-left: 2.5%;
+    background-color: rgb(199, 199, 199);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 35px;
+    padding-top: 15px;
+   
+}
+
+
+/* Users */
+
+.user_lijst {
+    width: 600px;
+    height: 95%;
+    background-color: rgb(160, 160, 160);
+    margin-top: 15px; 
+    margin-left: 50px;
+    padding-top: 15px;
+    padding-bottom: 10px;  
+    border-radius: 25px; 
+}
+
+.user {
+    width: 90%;
+    height: 100px;
+    background-color: rgb(245, 245, 245);
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    border-radius: 25px;
+}
+
+.user p,small {
+    text-align: center;
+}
+
+.updel {
+    font-size: 18px;
+    text-decoration: none ;
+    color: black;
+    
+}
+
+.main_knopje {
+    margin-top: -25px;
+    margin-left: 200px;
+
+}
+
+.knopje {
+    margin-top: 10px;
+    text-align: center;
+    width: 70px;
+    background-color: rgb(24, 165, 221);
+    height: 35px;
+    border-radius: 25px;
+}
+
+.knopje1 {
+    margin-top: -35px;
+    margin-left: 80px;
+    text-align: center;
+    width: 70px;
+    background-color: rgb(221, 24, 24);
+    height: 35px;
+    border-radius: 25px;
+}
+
+.admin_check {
+    position: absolute;
+    color: rgb(0, 190, 0);
 }

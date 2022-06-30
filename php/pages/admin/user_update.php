@@ -5,16 +5,19 @@ include_once('../config/config.php');
 
 $id = $_GET['edit'];
 
-if(isset($_POST['update_product'])){
+if(isset($_POST['update_gebruiker'])){
 
-   $reis_image_tmp_name = $_FILES['product_image']['tmp_name'];
-   $reis_image_folder = 'uploaded_img/'.$reis_image;
+   $reis_name = $_POST['username'];
+   $wachtwoord = $_POST['password'];
+   $reis_land = $_POST['voornaam'];
+   $reis_bdate = $_POST['achternaam'];
+   $reis_edate = $_POST['isAdmin'];
+   
 
-   if(empty($reis_name) || empty($reis_price) || empty($reis_image) || empty($reis_land) || empty($reis_bdate) || empty($reis_edate) || empty($reis_sterren)){
-      $message[] = 'please fill out all';   
-   }else{
 
-      $stmt = $connect->query("UPDATE reizen SET ");
+  
+
+      $stmt = $connect->query("UPDATE gebruikers SET username='$reis_name', password='$wachtwoord', voornaam='$reis_land', achternaam='$reis_bdate', isAdmin='$reis_edate' WHERE gebruikerID = '$id'");
 
       if($stmt){
          move_uploaded_file($product_image_tmp_name, $product_image_folder);
@@ -23,7 +26,7 @@ if(isset($_POST['update_product'])){
          $$message[] = 'please fill out all!'; 
       }
 
-   }
+   
 };
 
 ?>
@@ -59,11 +62,14 @@ if(isset($_POST['update_product'])){
    ?>
    
    <form action="" method="post" enctype="multipart/form-data">
-      <h3 class="title">Update de Gebruiker </h3>
-        <input type="text" placeholder="Voer hotel naam in" name="product_name" class="box">
-
-        <input type="submit" class="btn" name="add_product" value="add product">
-      <a href="../admin.php" class="btn">ga terug!</a>
+      <h3 class="title">update the product</h3>
+         <input type="text" placeholder="Gebruikersnaam" name="username" class="box" value="<?php echo $row['username']?>">
+         <input type="text" placeholder="Wachtwoord" name="password" class="box" value="<?php echo $row['password']?>">
+         <input type="text" placeholder="Voornaam" name="voornaam" class="box" value="<?php echo $row['voornaam']?>">
+         <input type="text" placeholder="Achternaam" name="achternaam" class="box" value="<?php echo $row['achternaam']?>">
+         <input type="number" min="0" max="1" placeholder="0" name="isAdmin" class="box" value="<?php echo $row['isAdmin']?>">
+         <input type="submit" name="update_gebruiker" value="Update Gebruiker">
+      <a href="../admin.php" class="btn">go back!</a>
    </form>
    
 

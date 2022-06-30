@@ -31,28 +31,25 @@
 <body>
     <div class="container_admin">
         <div class="log_uit">
-            <a href="../redirect.php"><button >doeii!!!</button></a>
-            <p>log uit</p>
+            <a href="../redirect.php"><div class="btn_blok">doeii!!!</div></a>
         </div>
         
         <div class="add">
-            <a href="admin/add.php"><button >Add</button></a>
-            <p>voeg iets toe</p>
+            <a href="admin/add.php"><div class="btn_blok">Add</div></a>
         </div>
 
         <div class="vragen">
-            <a href="admin/contact_view.php"><button >vragen</button></a>
-            <p>vragen</p>
+            <a href="admin/contact_view.php"><div class="btn_blok">vragen</div></a>
         </div>
 
         <div class="hotels">
-            <a href="admin/vakanties.php"><button >Hotels</button></a>
-            <p>Hotels</p>
+            <a href="admin/vakanties.php"><div class="btn_blok">Hotels</div></a>
         </div>
 
         <div class="management">
-            <a href="admin/users.php"><button >Users</button></a>
-            <p>User management</p>
+            
+                <a href="admin/users.php"><div class="btn_blok">Users</div></a>
+            
         </div>
     </div>
     
