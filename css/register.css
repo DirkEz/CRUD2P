@@ -88,11 +88,13 @@ body {
 .form__field::placeholder {
     color: transparent;
 }
+
 .form__field:placeholder-shown ~ .form__label {
     font-size: 1.3rem;
     cursor: text;
     top: 20px;
 }
+
 .form__label {
     position: absolute;
     top: 0;
