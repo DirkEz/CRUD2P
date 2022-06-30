@@ -12,6 +12,9 @@
   background-color: #e7e7e7;
   margin-left: 2.5vw;
   border-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .boeking {
@@ -84,4 +87,24 @@
 
 body{
   background: url('../img/achtergrond/GettyImages755761377.jpg') no-repeat center center fixed;
+}
+
+.color-mode {
+  aspect-ratio: 1;
+  filter: invert(var(--dark-mode));
+  inline-size: 25rem;
+  max-inline-size: 50vw;
+  transform: rotate(calc(var(--dark-mode) * 180deg));
+  transition: all .6s ease;
+  width: 40px;
+    margin-left: 1025px;
+}
+
+body {
+  --dark-mode: 0;
+  background-color: hsl(0, 0%, calc(100% * (1 - var(--dark-mode))));
+  display: grid;
+  min-block-size: 95vh;
+  place-content: center;
+  transition: all .6s ease;
 }
