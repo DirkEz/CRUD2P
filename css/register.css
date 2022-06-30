@@ -73,6 +73,7 @@ body {
     margin-top: 10px;
     width: 400px;
 }
+
 .form__field {
     font-family: inherit;
     width: 100%;
@@ -85,6 +86,7 @@ body {
     background: transparent;
     transition: border-color 0.2s;
 }
+
 .form__field::placeholder {
     color: transparent;
 }
