@@ -9,7 +9,7 @@
 body {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right, #009FFF, #EC2F4B, #8789C0, #45F0DF, #111D4A);
+    background-image: linear-gradient(to right, #009FFF, #EC2F4B, #f4fd00, #ff6a00, #00c5bb);
     background-size: 500%; 
     animation: background-img-animation 20s alternate infinite;
     display: flex;
@@ -30,15 +30,16 @@ body {
 
 .blok {
     width: 600px;
-    height: 929px;
+    height: 400px;
     background-color: white;
     /* background-color: aqua;   */
     box-shadow: 3px 8px 11px 2px rgba(0,0,0,0.2);
+    margin-top: 170px;
 }
 
 .formpje {
     background-color: white;
-    padding-top: 250px;
+    margin-top: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
