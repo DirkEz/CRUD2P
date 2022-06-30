@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 26 jun 2022 om 21:14
--- Serverversie: 10.4.22-MariaDB
--- PHP-versie: 8.1.2
+-- Gegenereerd op: 30 jun 2022 om 13:03
+-- Serverversie: 10.4.21-MariaDB
+-- PHP-versie: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,6 +26,29 @@ USE `dirk_crudp4`;
 -- --------------------------------------------------------
 
 --
+-- Tabelstructuur voor tabel `bericht`
+--
+
+CREATE TABLE `bericht` (
+  `berichtID` int(6) NOT NULL,
+  `naam` varchar(50) DEFAULT '0',
+  `email` varchar(50) NOT NULL DEFAULT '',
+  `bericht` text NOT NULL,
+  `datum` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `bericht`
+--
+
+INSERT INTO `bericht` (`berichtID`, `naam`, `email`, `bericht`, `datum`) VALUES
+(1, 'Dirk', 'dirk@gmail.com', 'Test', '2022-06-27'),
+(2, 'Merdan', 'merdan@gmail.com', 'Test', '2022-06-27'),
+(3, 'merdan', 'merdan@gmail.com', 'test\r\n', '2022-06-27');
+
+-- --------------------------------------------------------
+
+--
 -- Tabelstructuur voor tabel `boekingen`
 --
 
@@ -33,29 +56,10 @@ CREATE TABLE `boekingen` (
   `boekingID` int(6) NOT NULL,
   `gebruikerID` int(6) NOT NULL,
   `reisID` int(6) NOT NULL,
-  `beginDatum` date NOT NULL,
-  `EindDatum` date NOT NULL
+  `vliegveld` varchar(255) DEFAULT NULL,
+  `volwassenen` int(6) DEFAULT NULL,
+  `kinderen` int(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `contact`
---
-
-CREATE TABLE `contact` (
-  `contactID` int(6) NOT NULL,
-  `gebruikerID` int(6) DEFAULT NULL,
-  `voornaam` varchar(50) NOT NULL,
-  `bericht` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Gegevens worden geëxporteerd voor tabel `contact`
---
-
-INSERT INTO `contact` (`contactID`, `gebruikerID`, `voornaam`, `bericht`) VALUES
-(1, 4, 'Dirk', 'Test');
 
 -- --------------------------------------------------------
 
@@ -69,17 +73,16 @@ CREATE TABLE `gebruikers` (
   `password` varchar(255) DEFAULT NULL,
   `voornaam` varchar(50) DEFAULT NULL,
   `achternaam` varchar(60) DEFAULT NULL,
-  `admin` tinyint(4) DEFAULT 0 COMMENT 'Altijd default value van 0'
+  `isAdmin` tinyint(4) DEFAULT 0 COMMENT 'Altijd default value van 0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `gebruikers`
 --
 
-INSERT INTO `gebruikers` (`gebruikerID`, `username`, `password`, `voornaam`, `achternaam`, `admin`) VALUES
-(4, 'DirkEz', 'Dirk123', 'Dirk', 'Schaafstra', 1),
-(8, 'Dirk', 'Dirk123', 'Dirk', 'Schaafstra', 0),
-(15, 'Merdan', 'hoidirk', 'Merdan', 'Can', 0);
+INSERT INTO `gebruikers` (`gebruikerID`, `username`, `password`, `voornaam`, `achternaam`, `isAdmin`) VALUES
+(16, 'DirkEz', 'Dirk123', 'Dirk', 'Schaafstra', 1),
+(17, 'Dirk', 'Dirk123', 'Dirk', 'Schaafstra', 0);
 
 -- --------------------------------------------------------
 
@@ -89,6 +92,7 @@ INSERT INTO `gebruikers` (`gebruikerID`, `username`, `password`, `voornaam`, `ac
 
 CREATE TABLE `recenties` (
   `recentieID` int(6) NOT NULL,
+  `hotel` varchar(255) DEFAULT NULL,
   `voornaam` varchar(50) NOT NULL DEFAULT '0',
   `achternaam` varchar(50) NOT NULL DEFAULT '',
   `bericht` text NOT NULL,
@@ -100,17 +104,8 @@ CREATE TABLE `recenties` (
 -- Gegevens worden geëxporteerd voor tabel `recenties`
 --
 
-INSERT INTO `recenties` (`recentieID`, `voornaam`, `achternaam`, `bericht`, `rating`, `datum`) VALUES
-(2, 'Merdan', 'Can', 'vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas integer eget aliquet nibh praesent tristique magna sit amet purus gravida quis blandit turpis cursus in hac habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus', 5, '2022-06-23'),
-(3, 'Dirk', 'Schaafstra', 'vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas integer eget aliquet nibh praesent tristique magna sit amet purus gravida quis blandit turpis cursus in hac habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus', 5, '2022-06-23'),
-(4, 'Gavin', 'Tetteroo', 'vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas integer eget aliquet nibh praesent tristique magna sit amet purus gravida quis blandit turpis cursus in hac habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus', 2, '2022-06-23'),
-(5, 'Leon', 'de Haas', 'vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas integer eget aliquet nibh praesent tristique magna sit amet purus gravida quis blandit turpis cursus in hac habitasse platea dictumst quisque sagittis purus sit amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris a diam maecenas sed enim ut sem viverra aliquet eget sit amet tellus', 3, '2022-06-23'),
-(6, 'swagmaster69', '', 'gangstersite maar soms een beetje gettho', 69, '2022-06-23'),
-(7, 'Randy', 'Jansen', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu aliquet est, vitae rhoncus augue. Curabitur congue ex ipsum, a vulputate sem viverra id. Donec vel sapien eros. Curabitur elementum nulla nunc, sit amet lobortis urna bibendum at. Maecenas sodales quam tellus, sit amet euismod dolor pharetra et. Nunc suscipit consectetur augue sed aliquet. Etiam accumsan nisl sit amet diam varius, at tempor felis vehicula. Ut placerat sapien sed libero cursus molestie. Vestibulum sollicitudin condimentum enim, sit amet tincidunt lorem sollicitudin a. Interdum et malesuada fames ac ante ipsum primis in faucibus. In mollis convallis massa, sit amet tincidunt magna.', 3, '2022-06-23'),
-(8, 'Youri', 'Gruiters', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu aliquet est, vitae rhoncus augue. Curabitur congue ex ipsum, a vulputate sem viverra id. Donec vel sapien eros. Curabitur elementum nulla nunc, sit amet lobortis urna bibendum at. Maecenas sodales quam tellus, sit amet euismod dolor pharetra et. Nunc suscipit consectetur augue sed aliquet. Etiam accumsan nisl sit amet diam varius, at tempor felis vehicula. Ut placerat sapien sed libero cursus molestie. Vestibulum sollicitudin condimentum enim, sit amet tincidunt lorem sollicitudin a. Interdum et malesuada fames ac ante ipsum primis in faucibus. In mollis convallis massa, sit amet tincidunt magna.', 5, '2022-06-23'),
-(9, 'Bjoreno', '.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu aliquet est, vitae rhoncus augue. Curabitur congue ex ipsum, a vulputate sem viverra id. Donec vel sapien eros. Curabitur elementum nulla nunc, sit amet lobortis urna bibendum at. Maecenas sodales quam tellus, sit amet euismod dolor pharetra et. Nunc suscipit consectetur augue sed aliquet. Etiam accumsan nisl sit amet diam varius, at tempor felis vehicula. Ut placerat sapien sed libero cursus molestie. Vestibulum sollicitudin condimentum enim, sit amet tincidunt lorem sollicitudin a. Interdum et malesuada fames ac ante ipsum primis in faucibus. In mollis convallis massa, sit amet tincidunt magna.', 1, '2022-06-23'),
-(10, 'hans', 'jansen', 'WOWWWWW DIT IS ECHT EEN DIKKE SITE PROMO MOGELIJK?', 5, '2022-06-23'),
-(11, 'mo', 'azarkan', 'dikke oplichters. heb een reis teurg naar marokko geboekt door wilders, maar heb door deze kaulo website mijn tickets niet gekregen', 0, '2022-06-23');
+INSERT INTO `recenties` (`recentieID`, `hotel`, `voornaam`, `achternaam`, `bericht`, `rating`, `datum`) VALUES
+(17, 'Jakarta', 'Dirk', 'Schaafstra', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices nisl a tincidunt interdum. Donec vehicula nibh sodales feugiat malesuada. Fusce tempor, leo consequat semper cursus, est nunc varius quam, ac ornare nulla nulla ut diam. Ut auctor nunc congue, mollis mi id, blandit ligula. Integer lorem eros, lacinia non fringilla et, lacinia in lorem. Vivamus mattis interdum neque, vitae laoreet risus porttitor vitae. Nullam eget rhoncus enim. Donec blandit leo magna, id accumsan ligula tristique a. Maecenas quis varius nisi, id porta augue. Aliquam in magna quis lacus posuere facilisis. Proin sit amet neque at ante euismod pretium id.', 4, '2022-06-29');
 
 -- --------------------------------------------------------
 
@@ -134,30 +129,27 @@ CREATE TABLE `reizen` (
 --
 
 INSERT INTO `reizen` (`reisID`, `beginDatum`, `eindDatum`, `hotel`, `prijs`, `sterren`, `Land`, `foto`) VALUES
-(2, NULL, NULL, 'Van der Valk', 500, 4, 'Nederland', NULL),
-(3, '2022-06-15', '2022-06-30', 'Van der Valk', 2500, 5, 'eqqweeqqe', 'unknown.png'),
-(4, '2022-06-15', '2022-06-30', 'Van der Valk', 2500, 5, 'eqqweeqqe', 'unknown.png'),
-(5, '2022-06-24', '2022-06-30', 'Van der Valk', 2500, 5, 'Nederland', 'unknown.png'),
-(6, '2022-06-29', '2022-06-30', 'Van der Valk Lent', 2500, 5, 'Nederland', 'unknown.png');
+(10, '2022-06-28', '2022-06-28', 'Et Suisse', 19, 4, 'Italie', '16356011.jpg'),
+(12, '2022-06-27', '2022-06-28', 'Hilton', 30, 5, 'Amerika', 'hiltonamericas.jpg'),
+(14, '2022-06-27', '2022-06-28', 'Jakarta', 15, 4, 'Nederland', 'Hotel-Jakarata-Amsterdam.jpg');
 
 --
 -- Indexen voor geëxporteerde tabellen
 --
 
 --
+-- Indexen voor tabel `bericht`
+--
+ALTER TABLE `bericht`
+  ADD PRIMARY KEY (`berichtID`);
+
+--
 -- Indexen voor tabel `boekingen`
 --
 ALTER TABLE `boekingen`
-  ADD PRIMARY KEY (`boekingID`,`beginDatum`,`EindDatum`) USING BTREE,
+  ADD PRIMARY KEY (`boekingID`) USING BTREE,
   ADD KEY `gebruikerID` (`gebruikerID`),
   ADD KEY `reisID` (`reisID`);
-
---
--- Indexen voor tabel `contact`
---
-ALTER TABLE `contact`
-  ADD PRIMARY KEY (`contactID`) USING BTREE,
-  ADD KEY `GebruikerID_contact` (`gebruikerID`);
 
 --
 -- Indexen voor tabel `gebruikers`
@@ -182,6 +174,12 @@ ALTER TABLE `reizen`
 --
 
 --
+-- AUTO_INCREMENT voor een tabel `bericht`
+--
+ALTER TABLE `bericht`
+  MODIFY `berichtID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT voor een tabel `boekingen`
 --
 ALTER TABLE `boekingen`
@@ -191,19 +189,19 @@ ALTER TABLE `boekingen`
 -- AUTO_INCREMENT voor een tabel `gebruikers`
 --
 ALTER TABLE `gebruikers`
-  MODIFY `gebruikerID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `gebruikerID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT voor een tabel `recenties`
 --
 ALTER TABLE `recenties`
-  MODIFY `recentieID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `recentieID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT voor een tabel `reizen`
 --
 ALTER TABLE `reizen`
-  MODIFY `reisID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `reisID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Beperkingen voor geëxporteerde tabellen
@@ -215,12 +213,6 @@ ALTER TABLE `reizen`
 ALTER TABLE `boekingen`
   ADD CONSTRAINT `boekingen_ibfk_1` FOREIGN KEY (`gebruikerID`) REFERENCES `gebruikers` (`gebruikerID`),
   ADD CONSTRAINT `boekingen_ibfk_2` FOREIGN KEY (`reisID`) REFERENCES `reizen` (`reisID`);
-
---
--- Beperkingen voor tabel `contact`
---
-ALTER TABLE `contact`
-  ADD CONSTRAINT `GebruikerID_contact` FOREIGN KEY (`gebruikerID`) REFERENCES `gebruikers` (`gebruikerID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
