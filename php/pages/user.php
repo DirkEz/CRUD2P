@@ -37,14 +37,14 @@
         </svg>
     </div>  
     </header>
-    <a href="../redirect.php">Terug</a>
+   
     <a href=""></a>
     <div class="mainbox"> 
         <div class="boeking"> 
             <h1 class="dash">dashboard</h1>
         </div>
         <div class="box1"> 
-       
+        <a href="../redirect.php"><button> Terug naar home page</button></a>
         </div>
         <div class="box2"> 
                 
