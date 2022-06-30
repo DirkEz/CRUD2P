@@ -105,8 +105,11 @@ body {
     padding-bottom: 6px;
     font-weight: 400;
     border-width: 3px;
-    border-image: linear-gradient(to right, #ffdf80, #ffcc33);
+    border-image: linear-gradient(to right, #009FFF, #EC2F4B, #ff6a00, #00c5bb);
+    border-size: 500%; 
+    animation: background-img-animation 20s alternate infinite;
     border-image-slice: 1;
+    
 }
 .form__field:focus ~ .form__label {
     position: absolute;
