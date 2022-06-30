@@ -6,6 +6,8 @@
   margin: 0px;
 }
 
+
+
 .header {
   width: 95vw;
   height: 50px;
@@ -61,6 +63,7 @@
   border-radius: 25px;
   margin-left: 35px;
   margin-top: 8px;
+  align-items: flex-end;
 }
 
 .box2 {
@@ -108,3 +111,4 @@ body {
   place-content: center;
   transition: all .6s ease;
 }
+
