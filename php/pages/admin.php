@@ -16,43 +16,33 @@
     $stmt = $connect->query("SELECT * FROM reizen");
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/admin1.css">
-    <title>
-    </title>
+    <link rel="stylesheet" href="css\style.css">
+    <title><?php 
+            echo $_SESSION["username"];
+    ?> - Admin Panel</title>
 </head>
 <body>
-    <header class="header">
-    <div class="account"> 
-          
-    </div>  
-    </header>
-    <a href="../redirect.php">Terug</a>
-    <a href=""></a>
-    <div class="mainbox"> 
-        <div class="boeking"> 
-            <h1 class="dash">Admin panel</h1>
-        </div>
-        <div class="box1"> 
-        <a href="../redirect.php"><button class="custom-btn btn-5">doeii!!!</button></a> -log uit
-        <br>
-        <br>
-        <a href="admin/add.php"><button class="custom-btn btn-5">Add</button></a> -voeg iets toe
-        <br>
-        <br>
-        <a href="admin/contact_view.php"><button class="custom-btn btn-5">vragen</button></a> -vragen
-        <br>
-        <br>
-        <a href="admin/vakanties.php"><button class="custom-btn btn-5">Hotels</button></a> -Hotels
-        </div>
-        <div class="box2"> 
-                
-        </div>
+<a href="../redirect.php"><button >doeii!!!</button></a> -log uit
+<a href="admin/add.php"><button >Add</button></a> -voeg iets toe
+<a href="admin/contact_view.php"><button >vragen</button></a> -vragen
+<a href="admin/vakanties.php"><button >Hotels</button></a> -Hotels
+<a href="admin/users.php"><button >Users</button></a> -User management
+
+    
+    <div class="blok">
+
+
+
     </div>
+
+
+   
 </body>
 </html>
