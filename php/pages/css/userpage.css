@@ -235,3 +235,23 @@ body {
 		transform: translateY(0);
 	}
 }
+
+body {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #5c5c5c, #69a0a1);
+  background-size: 500%; 
+  animation: background-img-animation 20s alternate infinite;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes background-img-animation {
+  0% {
+    background-position: left
+  }
+  100% {
+    background-position: right
+  }
+} 
