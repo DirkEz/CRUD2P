@@ -81,9 +81,10 @@
         </div>
         <div class="box2"> 
             <div class="balk"><a class="dashboard">welkom terug</a></div> <br>
-            <?php  while ($row = $stmt->fetch()) { ?>
+            
 
                 <div class="boek">
+                <?php  while ($row = $stmt->fetch()) { ?>
                 <p><?php echo $row['beginDatum'] ?></p> <p><?php echo $row['eindDatum'] ?></p> <p><?php echo $row['vliegveld'] ?></p>
                 <div class="knopje1">
                     <a class="updel" href="boekdel.php?delete=<?php echo $row['boekingID']; ?>" class="btn"> <i class="fas fa-trash"></i> Annuleer</a>
