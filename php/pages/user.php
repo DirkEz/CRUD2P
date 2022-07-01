@@ -65,7 +65,7 @@
         </div>
         </div>
         <div class="box1"> 
-        <a href="../redirect.php"><button> Terug naar home page</button></a>
+        <a href="../redirect.php"><button class="knop"> Terug naar home page</button></a>
         </div>
         <div class="box2"> 
             <div class="balk"><a class="dashboard">welkom terug</a></div>

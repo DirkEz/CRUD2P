@@ -273,3 +273,11 @@ body {
   font-size: 38px;
 }
 
+.knop{
+  border: none;
+    background-color: yellow;
+    border-radius: 4px;
+    margin-left: 100px;
+    margin-bottom: 15px;
+    width: 231px;
+}
