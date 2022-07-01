@@ -1,5 +1,5 @@
-<? session_start();
-echo $_SESSION["success"] = "The record was inserted successfully.";
+<?php session_start();
+$_SESSION["success"] = "The record was inserted successfully.";
 
 echo $_SESSION['gebruikersID'];
 
@@ -46,7 +46,6 @@ echo $_SESSION['gebruikersID'];
       </header>
 
       <div class="cover">
-    <?php  echo $_SESSION["gebruikerID"]; ?>
           <div class="blok">
                 <div class="formpje">
                 <form action="reserveer_redirect.php">

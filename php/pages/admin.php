@@ -32,25 +32,27 @@
 <<<<<<< HEAD
     <div class="container_admin">
         <div class="log_uit">
-            <a href="../redirect.php"><div class="btn_blok">doeii!!!</div></a>
+            <a href="../redirect.php"><div class="btn_blok">Terug naar Homepage</div></a>
         </div>
         
         <div class="add">
-            <a href="admin/add.php"><div class="btn_blok">Add</div></a>
+            <a href="admin/add.php"><div class="btn_blok">Bestemmingen toevoegen</div></a>
         </div>
 
         <div class="vragen">
-            <a href="admin/contact_view.php"><div class="btn_blok">vragen</div></a>
+            <a href="admin/contact_view.php"><div class="btn_blok">Contact</div></a>
         </div>
 
         <div class="hotels">
-            <a href="admin/vakanties.php"><div class="btn_blok">Hotels</div></a>
+            <a href="admin/vakanties.php"><div class="btn_blok">Bestemmingen</div></a>
         </div>
 
         <div class="management">
-            
-                <a href="admin/users.php"><div class="btn_blok">Users</div></a>
-            
+                <a href="admin/users.php"><div class="btn_blok">Gebruikers</div></a>
+        </div>
+
+        <div class="reserveringen">
+                <a href="admin/reservering_beheer.php"><div class="btn_blok">Reserveringen</div></a>
         </div>
 </div>
     

@@ -12,7 +12,7 @@
         $result = $stmt->fetch();
         
         if($result) {
-            $_SESSION["gebruikerID"] = $result['gebruikerID'];
+            $_SESSION["gebruikersID"] = $result['gebruikerID'];
             $_SESSION["username"] = $result['username'];
             $_SESSION['aisAdmin'] = $result['isAdmin'];
             if ($result['isAdmin'] === 0){
