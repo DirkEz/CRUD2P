@@ -68,7 +68,8 @@
         <a href="../redirect.php"><button> Terug naar home page</button></a>
         </div>
         <div class="box2"> 
-                
+            <div class="balk"><a class="dashboard">welkom terug</a></div>
+            
         </div>
     </div>
 </body>
