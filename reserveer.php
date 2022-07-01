@@ -1,8 +1,6 @@
 <?php session_start();
 $_SESSION["success"] = "The record was inserted successfully.";
 
-echo $_SESSION['gebruikersID'];
-
    include_once('php\pages\config\config.php');
 
    $stmt = $connect->query("SELECT * FROM reizen");
