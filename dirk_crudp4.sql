@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 30 jun 2022 om 13:03
+-- Gegenereerd op: 01 jul 2022 om 10:01
 -- Serverversie: 10.4.21-MariaDB
 -- PHP-versie: 8.0.10
 
@@ -56,10 +56,21 @@ CREATE TABLE `boekingen` (
   `boekingID` int(6) NOT NULL,
   `gebruikerID` int(6) NOT NULL,
   `reisID` int(6) NOT NULL,
+  `beginDatum` date DEFAULT NULL,
+  `eindDatum` date DEFAULT NULL,
   `vliegveld` varchar(255) DEFAULT NULL,
   `volwassenen` int(6) DEFAULT NULL,
   `kinderen` int(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `boekingen`
+--
+
+INSERT INTO `boekingen` (`boekingID`, `gebruikerID`, `reisID`, `beginDatum`, `eindDatum`, `vliegveld`, `volwassenen`, `kinderen`) VALUES
+(2, 17, 10, '0000-00-00', '0000-00-00', 'Schiphol', 1, 0),
+(3, 17, 14, '2022-07-12', '2022-07-12', 'Rotterdam', 2, 1),
+(4, 17, 14, '2022-07-12', '2022-07-12', 'Rotterdam', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -183,7 +194,7 @@ ALTER TABLE `bericht`
 -- AUTO_INCREMENT voor een tabel `boekingen`
 --
 ALTER TABLE `boekingen`
-  MODIFY `boekingID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `boekingID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT voor een tabel `gebruikers`
