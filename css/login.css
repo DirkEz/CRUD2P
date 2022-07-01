@@ -157,3 +157,20 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200;500&display=swap');
 
 
+@media only screen and (max-width: 434px) {
+    .blok{  
+    width: 384px;
+    }
+
+    .form__group field{
+        width: 200px;
+        margin-left: 5px;
+        justify-content: none;
+    }
+
+    .form__group{
+        width: 200px;
+        margin-left: 5px;
+        justify-content: none;
+    }
+  }
