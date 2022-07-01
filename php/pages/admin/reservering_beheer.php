@@ -1,92 +1,46 @@
-<?php
+<?php 
+
 session_start();
 
-include_once('../config/config.php');
+include_once('../config/config.php') ;
 
-$id = $_GET['edit'];
 
-if(isset($_POST['update_product'])){
 
-   $reis_name = $_POST['product_name'];
-   $reis_land = $_POST['product_land'];
-   $reis_bdate = $_POST['product_bdate'];
-   $reis_edate = $_POST['product_edate'];
-   $reis_sterren = $_POST['product_sterren'];
-   $reis_price = $_POST['product_price'];
-   $reis_image = $_FILES['product_image']['name'];
-   $reis_image_tmp_name = $_FILES['product_image']['tmp_name'];
-   $reis_image_folder = 'uploaded_img/'.$reis_image;
 
-   if(empty($reis_name) || empty($reis_price) || empty($reis_image) || empty($reis_land) || empty($reis_bdate) || empty($reis_edate) || empty($reis_sterren)){
-      $message[] = 'please fill out all';   
-   }else{
-
-      $stmt = $connect->query("UPDATE reizen SET beginDatum='$reis_bdate', eindDatum='$reis_edate', hotel='$reis_name', prijs='$reis_price', sterren='$reis_sterren', Land='$reis_land', foto='$reis_image', WHERE id = '$id'");
-
-      if($stmt){
-         move_uploaded_file($product_image_tmp_name, $product_image_folder);
-         header('location:../admin.php');
-      }else{
-         $$message[] = 'please fill out all!'; 
-      }
-
-   }
-};
+$stmt = $connect->query("SELECT * FROM boekingen");
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <title>Boeking Beheer</title>
 </head>
 <body>
+<a href="../admin.php">Terug</a>
+    <div class="user_lijst">
 
-<?php
-   if(isset($message)){
-      foreach($message as $message){
-         echo '<span class="message">'.$message.'</span>';
-      }
-   }
-?>
-
-<div class="container">
-
-
-<div class="admin-product-form-container centered">
-
-   <?php
-      
-      $stmt = $connect->query("SELECT * FROM reizen WHERE reisID = '$id'");
-      while ($row = $stmt->fetch()){
-
-   ?>
-   
-   <form action="" method="post" enctype="multipart/form-data">
-      <h3 class="title">update the product</h3>
-         <input type="text" placeholder="Voer hotel naam in" name="product_name" class="box" value="<?php echo $row['hotel']?>">
-         <input type="text" placeholder="Voer het land in" name="product_land" class="box" value="<?php echo $row['Land']?>">
-         <input type="date" placeholder="Begin datum" name="product_bdate" class="box" value="<?php echo $row['beginDatum']?>">
-         <input type="date" placeholder="Eind datum" name="product_edate" class="box" value="<?php echo $row['eindDatum']?>">
-         <input type="number" placeholder="Prijs" name="product_price" class="box" min="1" value="<?php echo $row['prijs']?>">
-         <input type="number" placeholder="Hoeveelheid sterren" min="1" max="5" name="product_sterren" class="box" value="<?php echo $row['sterren']?>">
-         <input type="file" accept="image/png, image/jpeg, image/jpg" name="product_image" class="box" value="<?php echo $row['foto']?>">
-         <input type="submit" class="btn" name="add_product" value="add product">
-      <a href="../admin.php" class="btn">go back!</a>
-   </form>
-   
-
-
-   <?php }; ?>
-
-   
-
-</div>
-
-</div>
-
+    <?php  while ($row = $stmt->fetch()) { ?>
+    <div class="user">
+        <h2>
+        <p><?php echo $row["vliegveld"]; ?> <?php echo "Volwassenen: " . $row['volwassenen'];?> <?php echo "Kinderen: " . $row['kinderen'];?></p>
+        
+            <small> Username: <?php echo $row["username"]; ?></small>  <br>
+            <div class="main_knopje">
+            <div class="knopje">
+            <a class="updel" href=" user_update.php?edit=<?php echo $row['gebruikerID']; ?>" class="btn"> <i class="fas fa-edit"></i> Edit </a>
+            </div>
+            <div class="knopje1">
+            <a class="updel" href="user_delete.php?delete=<?php echo $row['gebruikerID']; ?>" class="btn"> <i class="fas fa-trash"></i> Delete </a>
+        </div>
+        </div>
+        </h2>
+    </div> 
+    <?php } ?>
+    </div>
 </body>
 </html>
