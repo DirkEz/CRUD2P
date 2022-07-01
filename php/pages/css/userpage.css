@@ -290,6 +290,13 @@ body {
   height: 40px;
   background-color: white;
   margin-left: 2vw;
+  background-color: #f6ff00;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
 }
 
 .knopje1 {
@@ -305,6 +312,7 @@ body {
 
 .boek p {
   margin-left: 15px;
+  
 }
 
 a {
