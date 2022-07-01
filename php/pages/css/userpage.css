@@ -281,3 +281,34 @@ body {
     margin-bottom: 15px;
     width: 231px;
 }
+
+.boek {
+  margin-top:100px;
+  position: absolute;
+  display: flex;
+  width: 60vw;
+  height: 40px;
+  background-color: white;
+  margin-left: 2vw;
+}
+
+.knopje1 {
+  width: 80px;
+  height: 20px;
+  background-color: #ff0000;
+  text-align: center;
+  padding-top: 2.5px;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-left: 400px;
+}
+
+.boek p {
+  margin-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  
+}

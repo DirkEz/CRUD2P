@@ -14,7 +14,7 @@
         if($result) {
             $_SESSION["gebruikersID"] = $result['gebruikerID'];
             $_SESSION["username"] = $result['username'];
-            $_SESSION['aisAdmin'] = $result['isAdmin'];
+            $_SESSION['isAdmin'] = $result['isAdmin'];
             if ($result['isAdmin'] === 0){
                 header("Location: pages\user.php");
                 echo 1;

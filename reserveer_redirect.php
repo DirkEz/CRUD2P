@@ -7,7 +7,8 @@
 
   if (isset($_POST['boekje'])){
     
-    if($_SESSION["gebruikersID"]) {        
+    if($_SESSION["gebruikersID"]) {    
+      if($_POST['volwassenen']  != "0" || $_POST['beginDatum']  != "0000-00-00" || $_POST['eindDatum']  != "0000-00-00") {   
         echo "1";
         echo "2";
         $sql = "INSERT INTO boekingen (gebruikerID, reisID, beginDatum, eindDatum, vliegveld, volwassenen, kinderen)
@@ -26,8 +27,9 @@
         // echo $sql;
         header("Location:reserveersucces.php");
         exit();
+      }
     }else {
-        // header("Location:../login.php");
+        header("Location: php/login.php");
         echo "4";
         exit();
     }

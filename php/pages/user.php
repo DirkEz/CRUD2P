@@ -1,13 +1,25 @@
 <?php 
     session_start();
     
+    include_once('config/config.php');
 
     if($_SESSION["username"]){
         echo "Je bent ingelogd als " . $_SESSION["username"];
     } else {
         header ("Location: ../login.php");
     }
-?>
+
+
+
+    // $reisid = reisID;
+    $id = $_SESSION['gebruikersID'];
+    // $stmt = $connect->query("SELECT reisID FROM boekingen");
+    $stmt = $connect->query("SELECT * FROM boekingen WHERE gebruikerID = '$id'");
+    // $stmt = $connect->query("SELECT * FROM reizen WHERE reisID = '$reisid'");
+    
+
+
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,8 +80,16 @@
         <a href="../redirect.php"><button class="knop"> Terug naar home page</button></a>
         </div>
         <div class="box2"> 
-            <div class="balk"><a class="dashboard">welkom terug</a></div>
-            
+            <div class="balk"><a class="dashboard">welkom terug</a></div> <br>
+            <?php  while ($row = $stmt->fetch()) { ?>
+
+                <div class="boek">
+                <p><?php echo $row['beginDatum'] ?></p> <p><?php echo $row['eindDatum'] ?></p> <p><?php echo $row['vliegveld'] ?></p>
+                <div class="knopje1">
+                    <a class="updel" href="boekdel.php?delete=<?php echo $row['boekingID']; ?>" class="btn"> <i class="fas fa-trash"></i> Annuleer</a>
+                </div>
+                </div>
+    <?php  }?>
         </div>
     </div>
 </body>
