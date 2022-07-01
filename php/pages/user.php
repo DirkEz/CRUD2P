@@ -4,7 +4,7 @@
     include_once('config/config.php');
 
     if($_SESSION["username"]){
-        echo "Je bent ingelogd als " . $_SESSION["username"];
+        echo ".";
     } else {
         header ("Location: ../login.php");
     }
