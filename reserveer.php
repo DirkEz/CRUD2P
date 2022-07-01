@@ -5,6 +5,8 @@ echo $_SESSION['gebruikersID'];
 
    include_once('php\pages\config\config.php');
 
+   $stmt = $connect->query("SELECT * FROM reizen");
+
 ?>
 
 </html>
@@ -34,7 +36,7 @@ echo $_SESSION['gebruikersID'];
               <a href="reviews.php" title="Tours">Reviews</a>
             </li>
             <li>
-              <a href="bericht.php" title="Tours">contact</a>
+              <a href="bericht.php" title="Tours">Contact</a>
             </li>
             <li>
               <a class="btn" href="php/login.php" title="Register / Log In"
@@ -47,34 +49,38 @@ echo $_SESSION['gebruikersID'];
 
       <div class="cover">
           <div class="blok">
-                <div class="formpje">
-                <form action="reserveer_redirect.php">
-                <label for="vol" class="info">in welk hotel wilt u verblijven?</label> 
-                <br>
-                <br>
-                <input type="text" name="hotel">
-                <br>
-                <br>
-                <input type="date" name="beginDatum">
-                <br>
-                <br>
-                <input type="date" name="eindDatum">
-                <select name="vliegveld" id="vliegveld">
-                    <option value="amsterdam">Schiphol</option>
-                    <option value="eindhoven">Eindhoven Airport</option>
-                    <option value="rotterdam">Rotterdam Airport</option>
-                </select>
-                <br>
-                <br>
-                <label for="vol" class="info">Hoeveel volwasenen?</label> 
-                <br>
-                <input type="number" name="vol" id="volwas">
-                <input placeholder="" type="number" name="kind" id="kinder">
-                <br>
-                <br> 
-                <input type="submit" name="reserveer">
+              <div class="formpje">
+                <form action="reserveer_redirect.php" method="POST">
+                  <label for="vol" class="info">in welk hotel wilt u verblijven?</label> 
+                  <br>
+                  <br>
+                  <select name="hotel" id="hotel">
+                    <?php  while ($row = $stmt->fetch()) { ?>
+                      <option value="<?php echo $row['reisID'] ?>"><?php echo $row['hotel'] ?></option>
+                    <?php  }?>
+                  </select>
+                  <br>
+                  <br>
+                  <input type="date" name="beginDatum">
+                  <br>
+                  <br>
+                  <input type="date" name="eindDatum">
+                  <select name="vliegveld" id="vliegveld">
+                      <option value="Schiphol">Schiphol</option>
+                      <option value="Eindhoven">Eindhoven Airport</option>
+                      <option value="Rotterdam">Rotterdam Airport</option>
+                  </select>
+                  <br>
+                  <br>
+                  <label for="vol" class="info">Hoeveel volwasenen?</label> 
+                  <br>
+                  <input min="1" max="10" type="number" name="vol" id="volwas">
+                  <input min="0" max="10" type="number" name="kind" id="kinder">
+                  <br>
+                  <br> 
+                  <input type="submit" name="boekje">
                 </form>
-                </div>			
+              </div>			
           </div>
        </div>
       </div>
