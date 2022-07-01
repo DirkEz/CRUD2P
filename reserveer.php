@@ -7,6 +7,9 @@ echo $_SESSION['gebruikersID'];
 
    $stmt = $connect->query("SELECT * FROM reizen");
 
+
+   
+
 ?>
 
 </html>
@@ -40,7 +43,11 @@ echo $_SESSION['gebruikersID'];
             </li>
             <li>
               <a class="btn" href="php/login.php" title="Register / Log In"
-                >Register/Log In</a
+                ><?php if(isset($_SESSION['gebruikersID'])) {
+            echo "Log out";
+            } else {
+              echo "Log in";
+            }?></a
               >
             </li>
           </ul>

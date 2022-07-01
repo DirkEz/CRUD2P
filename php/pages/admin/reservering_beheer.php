@@ -32,10 +32,10 @@ $stmt = $connect->query("SELECT * FROM boekingen");
     
             <div class="main_knopje"> <br>
             <div class="knopje">
-            <a class="updel" href=" user_update.php?edit=<?php echo $row['gebruikerID']; ?>" class="btn"> <i class="fas fa-edit"></i> Edit </a>
+            <a class="updel" href=" boek_update.php?edit=<?php echo $row['boekingID']; ?>" class="btn"> <i class="fas fa-edit"></i> Edit </a>
             </div>
             <div class="knopje1">
-            <a class="updel" href="user_delete.php?delete=<?php echo $row['gebruikerID']; ?>" class="btn"> <i class="fas fa-trash"></i> Delete </a>
+            <a class="updel" href="boeking_delete.php?delete=<?php echo $row['boekingID']; ?>" class="btn"> <i class="fas fa-trash"></i> Delete </a>
         </div>
         </div>
         </h2>

@@ -29,7 +29,6 @@
     ?> - Admin Panel</title>
 </head>
 <body>
-<<<<<<< HEAD
     <div class="container_admin">
         <div class="log_uit">
             <a href="../redirect.php"><div class="btn_blok">Terug naar Homepage</div></a>
