@@ -29,12 +29,6 @@
            <?php
             echo $_SESSION["username"];
         ?>
-         <svg viewBox="0 0 400 400" class="color-mode" id="colorMode">
-            <circle r="195" cx="200" cy="200" fill="white" stroke="#000" stroke-width="10" />
-            <path d=" M 200 375 A 175 175 0 0 1 200 25" />
-            <path d=" M 200 300 A 100 100 0 0 1 200 100" fill="#FFF" />
-            <path d=" M 200 100 A 100 100 180 0 1 200 300" />
-        </svg>
     </div>  
     </header>
    
@@ -71,10 +65,11 @@
         </div>
         </div>
         <div class="box1"> 
-        <a href="../redirect.php"><button> Terug naar home page</button></a>
+        <a href="../redirect.php"><button class="knop"> Terug naar home page</button></a>
         </div>
         <div class="box2"> 
-                
+            <div class="balk"><a class="dashboard">welkom terug</a></div>
+            
         </div>
     </div>
 </body>
